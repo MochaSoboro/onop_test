@@ -1,0 +1,18 @@
+package aaa;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+
+public class NumberTest {
+	
+	@Test
+	void tt1() {
+		System.out.println("숫자 tt1 진입");
+		assertThat(20).isGreaterThan(10);
+	}
+	
+	
+}

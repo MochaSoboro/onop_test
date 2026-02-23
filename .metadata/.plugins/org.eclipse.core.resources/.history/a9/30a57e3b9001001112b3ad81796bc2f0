@@ -1,0 +1,17 @@
+package aaa;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+public class CollTest {
+
+	@Test
+	void tt1( ) {
+		List arr = List.of(11, 22, 33);
+		assertThat(arr).hasSize(3);
+		assertThat(arr).isEmpty();
+	}
+}

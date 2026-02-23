@@ -1,0 +1,30 @@
+package control_p;
+
+public class CoffeeMain {
+
+	public static void main(String[] args) {
+		String coffeeName = "아메리카노";
+		byte qty = 5;
+		short price;
+		
+		switch(coffeeName) {
+			case "아메리카노":
+				price = 2000;
+				break;
+			case "아시아노":
+				price = 3000;
+				break;
+			case "아프리카노":
+				price = 4000;
+				break;
+			default:
+				price = 0;
+		}
+		System.out.println("커피종류: "+coffeeName);
+		System.out.println("잔수: "+qty);
+		System.out.println(coffeeName+" "+qty+"잔 : "+qty*price+"원");
+		
+		
+	}
+
+}

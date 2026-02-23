@@ -1,0 +1,17 @@
+package aaa.control;
+
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class LoginController {
+	
+	@PostMapping("/login")
+	Map<String, String> login() {
+		System.out.println("백엔드 로그인 진입");
+		
+		return null;
+	}
+}

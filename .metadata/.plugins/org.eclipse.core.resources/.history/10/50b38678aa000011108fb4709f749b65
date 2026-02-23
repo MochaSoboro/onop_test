@@ -1,0 +1,26 @@
+package aaa.control;
+
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import aaa.JwtUtil;
+import aaa.model.LoginDTO;
+
+@RestController
+public class LoginController {
+	
+	private final JwtUtil jwtUtil;
+	
+	public LoginController(JwtUtil jwtUtil) {
+		this.jwtUtil = jwtUtil;
+	}
+
+	@PostMapping("/login")
+	Map<String, String> login(LoginDTO dto) {
+		System.out.println("백엔드 로그인 진입: "+dto);
+		
+		return Map.of("token", "aaaa");
+	}
+}

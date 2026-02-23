@@ -1,0 +1,17 @@
+package aaa;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class ASDFTests {
+	@Test
+	void tt1() {
+		System.out.println("나도 테스트");
+	}
+	
+	@Test
+	void tt2() {
+		System.out.println("나도 테스트");
+	}
+}

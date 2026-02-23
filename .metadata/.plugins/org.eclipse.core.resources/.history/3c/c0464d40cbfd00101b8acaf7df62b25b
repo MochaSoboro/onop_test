@@ -1,0 +1,32 @@
+package aaa.di;
+
+import java.io.File;
+
+import aaa.model.ExamDTO;
+import aaa.model.ExamMapper;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class ExamDelete implements ExamAction {
+
+	@Resource
+	ExamMapper mapper;
+	
+	@Override
+	public Object execute(ExamDTO dto, PageInfo pInfo, HttpServletRequest request, HttpServletResponse response) {
+		ExamDTO delDTO = mapper.detail(dto);
+		
+		if (delDTO.getFf() != null && !delDTO.getFf().equals("")) {
+			
+		}
+		
+		return null;
+	}
+	
+	void fileDelete(String ff, HttpServletRequest request) {
+		String path = request.getServletContext().getRealPath("/fff");
+		
+		new File(path+"\\"+ff).delete();
+	}
+}

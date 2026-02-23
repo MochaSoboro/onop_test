@@ -1,0 +1,30 @@
+package aaa.control;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import aaa.ExamProvider;
+import aaa.di.ExamAction;
+import aaa.di.PageInfo;
+import aaa.model.ExamDTO;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@RestController
+@RequestMapping("/exam")
+public class ExamRRRController {
+	@Resource
+	ExamProvider provider;
+	
+	@RequestMapping("detail")
+	Object home(ExamDTO dto, PageInfo pInfo,
+			HttpServletRequest request, HttpServletResponse response) {
+		Object res = provider.getContext()
+				.getBean("detail", ExamAction.class)
+				.execute(dto, pInfo, request, response);
+		
+		return res;
+	}
+	
+}

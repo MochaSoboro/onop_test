@@ -1,0 +1,24 @@
+package aaa;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+
+public class StringTest {
+	@Test
+	void tt1() {
+		assertThat("").isEmpty();
+//		assertThat("  ").isEmpty();
+		assertThat("  ").isNotEmpty();
+//		assertThat("").isNotEmpty();
+		
+		assertThat("").isBlank();
+		assertThat("       ").isBlank();
+//		assertThat("a").isBlank();
+	}
+	
+	@Test
+	void tt2() {
+		assertThat("아기상어 뚜루루뚜루").contains("기상");
+	}
+}

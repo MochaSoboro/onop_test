@@ -1,0 +1,23 @@
+package control_p;
+
+public class ifMain {
+
+	public static void main(String[] args) {
+		
+		boolean bo = true;
+		int b = 20;
+		int c;
+		
+		if (bo) {
+			int a = 10;	// 구간내에서 선언한 변수 구간 외부에서 사용 불가
+			c = 30;
+			System.out.println("true "+a+", "+c);
+		}
+		
+		System.out.println("if 종료-------------------");
+//		System.out.println(a);
+		System.out.println(b);
+//		System.out.println(c);	초기화 되지 않은 변수 호출 불가
+	}
+
+}

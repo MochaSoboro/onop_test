@@ -1,0 +1,18 @@
+package aaa;
+
+import org.junit.jupiter.api.Test;
+
+import aaa.model.ExamDTO;
+import aaa.model.ExamMapper;
+import jakarta.annotation.Resource;
+
+public class TranTests {
+	@Resource
+	ExamMapper mapper;
+	
+	@Test
+	void tt1() {
+		
+		mapper.insert(new ExamDTO(1, "쪽지", "sss", 71, 78, 63, "1111"));
+	}
+}

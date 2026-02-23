@@ -1,0 +1,40 @@
+package aaa;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+	
+	@Bean
+	public CorsFilter corsFilter() {
+		// CORS 정책을 가지고 있는 객체
+		CorsConfiguration config = new CorsConfiguration();
+		
+		// 헤더 쿠키 등 인증정보 전송 허용
+		config.setAllowCredentials(true);
+		
+		// 허용할 프론트엔드 주소
+		config.addAllowedOrigin("http://192.168.0.67:3000/");
+		
+		// 모든 헤더 허용 - "Content-Type" 등을 허용
+		config.addAllowedHeader("*");
+		
+		// 모든 메소드 허용 - GET, POST, PUT, DELETE 등
+		config.addAllowedMethod("*");
+		
+		// URL 패턴별 cors 정책 관리
+		UrlBasedCorsConfigurationSource source =
+				new UrlBasedCorsConfigurationSource();
+		
+		// 경로에 정책 허용
+		source.registerCorsConfiguration("/**", config);
+		
+		return new CorsFilter(source);
+	}
+}

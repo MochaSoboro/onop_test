@@ -1,0 +1,6 @@
+package aaa.di;
+
+public class PageInfo {
+	String service;
+	int pNo;
+}

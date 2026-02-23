@@ -1,0 +1,41 @@
+package aaa;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+// @SpringBootTest 없음
+public class NumberTest {
+			// @SpringBootTest 없음
+	@Test	// 단위 테스트시에는 Spring 실행하지 않음 - 처리 속도가 빠르다
+	void tt1() {
+		System.out.println("숫자 tt1 진입");
+		assertThat(20).isGreaterThan(10);	// 20 > 10
+		assertThat(20).isGreaterThan(20);	// 20 > 20	에러
+		assertThat(20).isGreaterThan(30);	// 20 > 30	에러
+	}
+	
+	@Test
+	void tt2() {
+		System.out.println("숫자 tt1 진입");
+		assertThat(20).isGreaterThanOrEqualTo(20);	// 20 >= 20
+		assertThat(20).isGreaterThanOrEqualTo(30);	// 20 >= 30
+	}
+	
+	@Test
+	void tt3() {
+		System.out.println("숫자 tt1 진입");
+		assertThat(20).isLessThan(30);	// 20 < 30
+		assertThat(20).isLessThanOrEqualTo(20);	// 20 <= 20
+	}
+	
+	@Test
+	void tt4() {
+		System.out.println("숫자 tt4 진입");
+		assertThat(7).isBetween(5, 10);	// 5 < 7 < 10
+		assertThat(5).isBetween(5, 10);	// 5 < 7 < 10
+	}
+	
+	
+}

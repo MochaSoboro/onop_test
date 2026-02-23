@@ -1,0 +1,6 @@
+package aaa;
+
+@SpringBootTest
+public class ASDFTests {
+
+}

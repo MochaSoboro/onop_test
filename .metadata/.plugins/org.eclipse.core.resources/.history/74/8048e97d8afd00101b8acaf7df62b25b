@@ -1,0 +1,12 @@
+package aaa.di;
+
+import lombok.Data;
+
+@Data
+public class PageInfo {
+	String service;
+	int limit = 3, pLimit = 4;
+	int pNo;
+	int start, total;
+	int pStart, pEnd;
+}

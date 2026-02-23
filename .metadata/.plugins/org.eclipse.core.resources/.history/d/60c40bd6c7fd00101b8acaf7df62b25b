@@ -1,0 +1,5 @@
+package aaa.di;
+
+public interface ExamAction {
+
+}

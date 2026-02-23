@@ -1,0 +1,10 @@
+package aaa.model;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+
+@Mapper
+public interface ExamMapper {
+	@Select("Select * from exam where id = 3")
+	ExamDTO detail(ExamDTO dto);
+}

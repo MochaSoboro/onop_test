@@ -1,0 +1,53 @@
+<%@page import="aaa.model.ExamDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	ExamDTO dto = (ExamDTO)request.getAttribute("mainData");
+%>
+<table border="">
+	<tr>
+		<td>ID</td>
+		<td><%= dto.getId() %></td>
+	</tr>
+	<tr>
+		<td>학기</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<%@page import="aaa.model.ExamDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>시험목록</h1>
+<%
+	ArrayList<ExamDTO> mainData = (ArrayList<ExamDTO>)request.getAttribute("mainData");
+%>
+
+<table border="">
+	<tr>
+		<td>ID</td>
+		<td>학기</td>
+		<td>시험</td>
+		<td>학생ID</td>
+		<td>시험일</td>
+		<td>국어</td>
+		<td>영어</td>
+		<td>수학</td>
+	</tr>
+	<% for (ExamDTO dto : mainData) { %>
+	<tr>
+		<td><%= dto.getId() %>></td>
+		<td>학기</td>
+		<td>시험</td>
+		<td>학생ID</td>
+		<td>시험일</td>
+		<td>국어</td>
+		<td>영어</td>
+		<td>수학</td>
+	</tr>
+	<% } %>
+</table>
+</body>
+</html>

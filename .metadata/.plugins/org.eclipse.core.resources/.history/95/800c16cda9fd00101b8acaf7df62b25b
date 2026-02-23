@@ -1,0 +1,13 @@
+server :
+    port : 5000
+
+spring :
+    datasource :
+        driver-class-name : com.mysql.cj.jdbc.Driver
+        url : jdbc:mysql://onop_db?characterEncoding=utf-8
+        username : onop
+        password : 123456
+
+mybatis :
+    configuration :
+        map-underscore-to-camel-case: true 

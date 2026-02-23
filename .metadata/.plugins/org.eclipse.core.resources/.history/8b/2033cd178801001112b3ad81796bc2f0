@@ -1,0 +1,27 @@
+package aaa;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class ASDFTests {
+	@Test
+	void tt1() {
+		System.out.println("나도 테스트");
+	}
+	
+	Object oo = null;
+	
+	@Test
+	void tt2() {
+		assertThat(oo).isNull();
+	}
+	
+	@Test
+	void tt3() {
+		assertThat(oo).isNotNull();
+	}
+}
