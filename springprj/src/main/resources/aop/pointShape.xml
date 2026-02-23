@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean class="aop_p.ddd.PointShapeAdvice" name="psa" />
+
+	<context:component-scan base-package="aop_p"/>
+	<context:annotation-config/>
+	
+	<aop:config>
+		<aop:aspect ref="psa">
+			<aop:around method="calc" pointcut-ref="sum"/> <!-- PointShapeAdvice의 calc 메소드를 실행 -->
+			<aop:pointcut expression="execution(* *..*(..)))" id="sum"/>
+		</aop:aspect>
+	</aop:config>
+	
+</beans>

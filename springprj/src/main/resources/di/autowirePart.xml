@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="mp" class="di_p.MainPower" p:name="본체" />
+	<bean name="mo" class="di_p.Moniter" p:name="삼성 오디세이" />
+	<bean name="kk" class="di_p.Keyboard" p:name="블루투스 키보드" />
+	<bean name="mm" class="di_p.Mouse" p:name="무선마우스" />
+	
+	<!-- 
+		MainPower mp;
+		Moniter mo;
+		Keyboard kk;
+		Mouse mm;
+	-->
+
+</beans>

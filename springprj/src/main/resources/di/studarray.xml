@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="st1" class="di_p.Stud" p:name="AAA" p:kor="70" p:eng="70" p:mat="70" />
+	<bean name="st2" class="di_p.Stud" p:name="BBB" p:kor="80" p:eng="80" p:mat="80" />
+	<bean name="st3" class="di_p.Stud" p:name="CCC" p:kor="50" p:eng="50" p:mat="50" />
+	<bean name="st4" class="di_p.Stud" p:name="DDD" p:kor="90" p:eng="90" p:mat="90" />
+	<bean name="st5" class="di_p.Stud" p:name="EEE" p:kor="60" p:eng="60" p:mat="60" />
+	<!--
+		bean 참조는 문자열로 대치하여 처리 불가
+		<bean name="ad51" class="di_p.ArrayData" p:pp5-ref="cc1, cc2, cc3" />
+	-->
+	<bean name="studs" class="di_p.StudData" autowire="byType" />
+	
+</beans>

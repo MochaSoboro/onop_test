@@ -1,0 +1,31 @@
+package aaa.di;
+
+import lombok.Data;
+
+@Data
+public class PageInfo {
+	String service;
+	int limit = 3, pLimit = 4;
+	int pNo;
+	int start;
+	int pStart, pEnd, pTotal;
+	
+	public void setPNo(int pNo) {
+		this.pNo = pNo;
+		start = (pNo - 1) * limit;
+		pStart = (pNo-1)/pLimit * pLimit + 1;
+		pEnd = pStart + pLimit - 1;
+		
+		if (pEnd > pTotal) {
+			pEnd = pTotal;
+		}
+	}
+	
+	public void setTotal(int total) {
+		pTotal = total/limit;
+		if (total % limit > 0) {
+			pTotal++;
+		}
+		
+	}
+}
